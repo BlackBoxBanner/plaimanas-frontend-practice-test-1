@@ -1283,7 +1283,7 @@ main {
 }
 
 .newsletter button {
-  border: 1px solid #000;
+  border: 0;
   background: #e0e0e0;
   color: #000;
   font-family: Arial, sans-serif;
