@@ -24,11 +24,13 @@
           </div>
         </div>
       </div>
-      <button class="mobile-menu-toggle" type="button" aria-label="Open menu">
-        <span></span>
-        <span></span>
+      <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu" data-mobile-menu-toggle>
+        <svg class="mobile-menu-icon" width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path class="mobile-menu-line mobile-menu-line-top" d="M0 0.5H20" stroke="black" />
+          <path class="mobile-menu-line mobile-menu-line-bottom" d="M0 8.5H20" stroke="black" />
+        </svg>
       </button>
-      <nav class="menu" aria-label="Primary">
+      <nav class="menu" id="primary-menu" aria-label="Primary">
         <a href="#">WOMEN</a>
         <a href="#">COLLECTIONS</a>
         <div class="menu-item editorial-item">
@@ -39,6 +41,9 @@
               <a class="editorial-option" href="#">BAZAAR</a>
               <a class="editorial-option" href="#">ELLE</a>
               <a class="editorial-option" href="#">GQ</a>
+              <a class="editorial-option" href="#">L'OFFICIAL THAILAND</a>
+              <a class="editorial-option" href="#">NUMERO</a>
+              <a class="editorial-option" href="#">VOGUE</a>
             </div>
           </div>
         </div>
@@ -51,6 +56,9 @@
           <img src="./images/shopping-bag-icon.svg" alt="" aria-hidden="true" />
         </a>
       </div>
+    </div>
+    <div class="mobile-menu-brand" aria-hidden="true">
+      <img class="mobile-menu-brand-logo" src="./images/PLAIMANAS.svg" alt="" />
     </div>
   </header>
 
@@ -96,23 +104,23 @@
       </article>
 
       <section class="collection reveal" style="--delay: 140ms;" aria-label="Collections">
-        <a href="#" class="media media-wide collection-item collection-item-01">
+        <div class="media media-wide collection-item collection-item-01">
           <img class="media-image media-primary" src="./images/c6b2c87677418227a1bb072efb7bec28f1a54014.jpg" alt="Collection 01" />
           <video class="media-video media-hover" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
             <source src="./images/DTS_THE_LEADER_Joey_Bania_Clips_ID10.mp4" type="video/mp4" />
           </video>
           <span class="overlay-label collection-label collection-label-01">COLLECTION 01</span>
-        </a>
-        <a href="#" class="media media-half collection-item collection-item-02">
+        </div>
+        <div class="media media-half collection-item collection-item-02">
           <img class="media-image media-primary" src="./images/f5a8b21b615bf2137dab5ecf7747b3b5503e057d.jpg" alt="Collection 02" />
           <img class="media-image media-hover" src="./images/3a8cff66f948def649520bc34a8a29886b2baad9.jpg" alt="" aria-hidden="true" />
           <span class="overlay-label collection-label collection-label-02">COLLECTION 02</span>
-        </a>
-        <a href="#" class="media media-half collection-item collection-item-03">
+        </div>
+        <div class="media media-half collection-item collection-item-03">
           <img class="media-image media-primary" src="./images/fe05c5d37eb2c0d3b5a0c02ddcc0cc05aa72320e.jpg" alt="Collection 03" />
           <img class="media-image media-hover" src="./images/3a8cff66f948def649520bc34a8a29886b2baad9.jpg" alt="" aria-hidden="true" />
           <span class="overlay-label collection-label collection-label-03">COLLECTION 03</span>
-        </a>
+        </div>
       </section>
     </section>
 
@@ -144,7 +152,7 @@
       <article>
         <h4>CUSTOMER SERVICE</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare nisl non rhoncus commodo,
+          <span style="text-decoration: underline;">Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Nam ornare nisl non rhoncus commodo,
           turpis elit ultricies justo.
         </p>
       </article>
@@ -161,7 +169,7 @@
       <h2>FREQUENTLY ASKED QUESTIONS</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare nisl non rhoncus commodo.</p>
       <div class="faq-tags" role="tablist" aria-label="FAQ categories">
-        <button type="button">ORDERS</button>
+        <button type="button" class="is-selected" aria-pressed="true">ORDERS</button>
         <button type="button">SHIPPING</button>
         <button type="button">RETURNS &amp; EXCHANGES</button>
         <button type="button">BUILDING MATERIALS</button>
@@ -169,23 +177,29 @@
 
       <div class="accordion">
         <details open>
-          <summary>WHAT IS YOUR RETURN POLICY?</summary>
-          <p>Returns are accepted within 14 days of receipt in original, unworn condition with all tags attached.</p>
+          <summary></summary>
+          <div class="accordion-content">
+            <p></p>
+          </div>
         </details>
         <details>
-          <summary>CAN I EXCHANGE FOR A DIFFERENT SIZE?</summary>
-          <p>You can exchange within 14 days if your requested size is in stock. Contact support to reserve it.</p>
+          <summary></summary>
+          <div class="accordion-content">
+            <p></p>
+          </div>
         </details>
         <details>
-          <summary>ARE SALE ITEMS REFUNDABLE?</summary>
-          <p>Discounted pieces are final sale unless damaged or sent incorrectly.</p>
+          <summary></summary>
+          <div class="accordion-content">
+            <p></p>
+          </div>
         </details>
       </div>
     </section>
 
     <section class="inquiry reveal" style="--delay: 30ms;">
       <div class="inquiry-intro">
-        <h2>MAKE AN<br />INQUIRY</h2>
+        <h2>MAKE AN<br class="inquiry-title-break" />INQUIRY</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare nisl non rhoncus commodo.</p>
       </div>
 
