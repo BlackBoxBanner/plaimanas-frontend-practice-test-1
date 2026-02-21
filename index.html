@@ -87,13 +87,13 @@
         </div>
       </article>
 
-      <article class="card reveal" style="--delay: 80ms;" data-fixed-overlay-card>
-        <a href="#" class="media media-wide media-bestseller" aria-label="Bestseller" data-fixed-overlay-frame>
+      <article class="card card-feature reveal" style="--delay: 80ms;" data-fixed-overlay-card>
+        <div class="media media-wide media-bestseller" aria-label="Bestseller" data-fixed-overlay-frame>
           <video class="media-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
             <source src="./images/DTS_THE_LEADER_Joey_Bania_Clips_ID10.mp4" type="video/mp4" />
           </video>
           <span class="overlay-label overlay-label-feature" data-fixed-overlay-label>BESTSELLER</span>
-        </a>
+        </div>
         <div class="card-feature-content">
           <h3>Sed egestas, nibh a condimentum imperdiet</h3>
           <p>
@@ -127,17 +127,17 @@
     <section class="ticker" aria-label="Highlights">
       <div class="ticker-track">
         <span class="ticker-word">NEW ARRIVAL</span>
-        <img class="ticker-icon" src="./images/Vector.svg" alt="" aria-hidden="true" />
+        <span class="ticker-icon-box" aria-hidden="true"><img class="ticker-icon" src="./images/Vector.svg" alt="" /></span>
         <span class="ticker-word">BEST SELLING</span>
-        <img class="ticker-icon" src="./images/Vector2.svg" alt="" aria-hidden="true" />
+        <span class="ticker-icon-box" aria-hidden="true"><img class="ticker-icon" src="./images/Vector2.svg" alt="" /></span>
         <span class="ticker-word">NEW ARRIVAL</span>
-        <img class="ticker-icon" src="./images/Vector.svg" alt="" aria-hidden="true" />
+        <span class="ticker-icon-box" aria-hidden="true"><img class="ticker-icon" src="./images/Vector.svg" alt="" /></span>
         <span class="ticker-word">BEST SELLING</span>
-        <img class="ticker-icon" src="./images/Vector2.svg" alt="" aria-hidden="true" />
+        <span class="ticker-icon-box" aria-hidden="true"><img class="ticker-icon" src="./images/Vector2.svg" alt="" /></span>
         <span class="ticker-word">NEW ARRIVAL</span>
-        <img class="ticker-icon" src="./images/Vector.svg" alt="" aria-hidden="true" />
+        <span class="ticker-icon-box" aria-hidden="true"><img class="ticker-icon" src="./images/Vector.svg" alt="" /></span>
         <span class="ticker-word">BEST SELLING</span>
-        <img class="ticker-icon" src="./images/Vector2.svg" alt="" aria-hidden="true" />
+        <span class="ticker-icon-box" aria-hidden="true"><img class="ticker-icon" src="./images/Vector2.svg" alt="" /></span>
       </div>
     </section>
 
@@ -169,68 +169,87 @@
       <h2>FREQUENTLY ASKED QUESTIONS</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare nisl non rhoncus commodo.</p>
       <div class="faq-tags" role="tablist" aria-label="FAQ categories">
-        <button type="button" class="is-selected" aria-pressed="true">ORDERS</button>
+        <button type="button">ORDERS</button>
         <button type="button">SHIPPING</button>
-        <button type="button">RETURNS &amp; EXCHANGES</button>
-        <button type="button">BUILDING MATERIALS</button>
+        <button type="button" class="is-selected" aria-pressed="true">RETURNS &amp; EXCHANGES</button>
+        <button type="button">SIZING &amp; PRODUCTS</button>
       </div>
 
       <div class="accordion">
         <details open>
-          <summary></summary>
+          <summary>WHAT IS YOUR RETURN POLICY?</summary>
           <div class="accordion-content">
-            <p></p>
+            <p>Items can be returned within 14 days of receipt, provided they are unworn, unwashed, and in original condition with tags attached.</p>
           </div>
         </details>
         <details>
-          <summary></summary>
+          <summary>CAN I EXCHANGE FOR A DIFFERENT SIZE?</summary>
           <div class="accordion-content">
-            <p></p>
+            <p>You can request a size exchange within 14 days if your preferred size is available. Contact support to confirm stock before sending your return.</p>
           </div>
         </details>
         <details>
-          <summary></summary>
+          <summary>ARE SALE ITEMS REFUNDABLE?</summary>
           <div class="accordion-content">
-            <p></p>
+            <p>Sale items are final sale and not refundable, unless the item arrives damaged or you receive the wrong product.</p>
           </div>
         </details>
       </div>
     </section>
 
     <section class="inquiry reveal" style="--delay: 30ms;">
-      <div class="inquiry-intro">
-        <h2>MAKE AN<br class="inquiry-title-break" />INQUIRY</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare nisl non rhoncus commodo.</p>
-      </div>
-
-      <form class="inquiry-form">
-        <fieldset class="mode-group">
-          <label><input type="radio" name="mode" checked /> Onsite</label>
-          <label><input type="radio" name="mode" /> Hybrid</label>
-        </fieldset>
-
-        <div class="inputs">
-          <label>
-            Full name*
-            <input type="text" name="name" />
-          </label>
-          <label>
-            Email*
-            <input type="email" name="email" placeholder="name@email.com" />
-          </label>
-          <label>
-            Phone Number*
-            <input type="tel" name="phone" />
-          </label>
-          <label>
-            Select Subject*
-            <input type="text" name="subject" />
-          </label>
+      <div class="inquiry-layout">
+        <div class="inquiry-intro">
+          <h2>MAKE AN<br class="inquiry-title-break" />INQUIRY</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo.</p>
         </div>
 
-        <label class="agree"><input type="checkbox" /> I agree to all terms &amp; conditions</label>
-        <button type="submit">SEND</button>
-      </form>
+        <form class="inquiry-form">
+          <div class="inquiry-fields">
+            <fieldset class="mode-group" aria-label="Inquiry mode">
+              <label class="mode-option">
+                <input type="radio" name="mode" checked />
+                <span>Onsite</span>
+              </label>
+              <label class="mode-option">
+                <input type="radio" name="mode" />
+                <span>Hybrid</span>
+              </label>
+            </fieldset>
+
+            <div class="inputs">
+              <label class="input-field">
+                <span class="input-label">Full name*</span>
+                <input type="text" name="name" autocomplete="name" />
+              </label>
+              <label class="input-field input-field-email">
+                <span class="input-meta">Email*</span>
+                <input type="email" name="email" value="Plaimanas@gmail.com" autocomplete="email" />
+              </label>
+              <label class="input-field">
+                <span class="input-label">Phone Number*</span>
+                <input type="tel" name="phone" autocomplete="tel" />
+              </label>
+              <label class="input-field input-field-select">
+                <select name="subject" required>
+                  <option value="" selected>Select Subject*</option>
+                  <option value="orders">Orders</option>
+                  <option value="shipping">Shipping</option>
+                  <option value="returns">Returns &amp; Exchanges</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="agree">
+              <input type="checkbox" />
+              <span>I agree to all terms &amp; conditions</span>
+            </label>
+          </div>
+
+          <button type="submit">SEND</button>
+        </form>
+      </div>
+      <p class="inquiry-home-link">Homepage</p>
     </section>
   </main>
 
@@ -238,15 +257,15 @@
     <div class="footer-grid">
       <section>
         <h5>ABOUT</h5>
-        <a href="#">Story</a>
-        <a href="#">Mission</a>
-        <a href="#">Atelier</a>
-        <a href="#">Contact</a>
+        <a href="#">Women</a>
+        <a href="#">Collections</a>
+        <a href="#">Editorial</a>
+        <a href="#">Stories</a>
       </section>
       <section>
         <h5>HELP</h5>
-        <a href="#">Payment Methods</a>
-        <a href="#">Delivery</a>
+        <a href="#">Payment Notification</a>
+        <a href="#">Customer Service</a>
         <a href="#">FAQ</a>
       </section>
       <section>
@@ -258,9 +277,9 @@
         <h5>LEGAL</h5>
         <a href="#">Terms &amp; Conditions</a>
         <a href="#">Privacy Policy</a>
-        <a href="#">Cookies</a>
+        <a href="#">Cookies Policy</a>
       </section>
-      <section>
+      <section class="footer-newsletter">
         <h5>NEWSLETTER</h5>
         <label class="newsletter">
           <input type="email" placeholder="Email" />

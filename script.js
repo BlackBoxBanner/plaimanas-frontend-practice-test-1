@@ -188,8 +188,6 @@ function initCurrencyDropdown() {
   const options = dropdown.querySelectorAll('.currency-option');
   if (!trigger || !current || !options.length) return;
 
-  let closeTimer = 0;
-
   const syncOptions = () => {
     const currentValue = current.textContent.trim();
     options.forEach((option) => {
@@ -199,26 +197,15 @@ function initCurrencyDropdown() {
   };
 
   const open = () => {
-    window.clearTimeout(closeTimer);
     syncOptions();
     dropdown.classList.add('is-open');
     setExpanded(trigger, true);
   };
 
   const close = () => {
-    window.clearTimeout(closeTimer);
     dropdown.classList.remove('is-open');
     setExpanded(trigger, false);
   };
-
-  const closeWithDelay = () => {
-    window.clearTimeout(closeTimer);
-    closeTimer = window.setTimeout(close, 90);
-  };
-
-  dropdown.addEventListener('pointerenter', open);
-  dropdown.addEventListener('pointerleave', closeWithDelay);
-  dropdown.addEventListener('focusin', open);
 
   dropdown.addEventListener('focusout', (event) => {
     if (!dropdown.contains(event.relatedTarget)) close();
@@ -488,36 +475,36 @@ function initFaqTabs() {
     ],
     'RETURNS & EXCHANGES': [
       {
-        question: 'WHAT IS YOUR RETURN WINDOW?',
+        question: 'WHAT IS YOUR RETURN POLICY?',
         answer:
-          'Returns are accepted within 14 days of delivery if items are unworn, unwashed, and include original tags and packaging.',
+          'Items can be returned within 14 days of receipt, provided they are unworn, unwashed, and in original condition with tags attached.',
       },
       {
-        question: 'HOW DO I REQUEST AN EXCHANGE?',
+        question: 'CAN I EXCHANGE FOR A DIFFERENT SIZE?',
         answer:
-          'Submit an exchange request through customer support with your order number, desired size, and item name for availability confirmation.',
+          'You can request a size exchange within 14 days if your preferred size is available. Contact support to confirm stock before sending your return.',
       },
       {
-        question: 'WHEN WILL MY REFUND BE ISSUED?',
+        question: 'ARE SALE ITEMS REFUNDABLE?',
         answer:
-          'Approved refunds are processed to the original payment method within 7-10 business days after your return is inspected.',
+          'Sale items are final sale and not refundable, unless the item arrives damaged or you receive the wrong product.',
       },
     ],
-    'BUILDING MATERIALS': [
+    'SIZING & PRODUCTS': [
       {
-        question: 'WHAT MATERIALS ARE USED IN YOUR PRODUCTS?',
+        question: 'WHAT SIZE RANGE DO YOU OFFER?',
         answer:
-          'We use curated fabrics including cotton blends, technical nylon, and selected natural fibers based on durability and comfort.',
+          'Our collections are produced in selected size ranges that vary by product category. Exact size availability is shown on each product page.',
       },
       {
-        question: 'HOW SHOULD I CARE FOR THESE MATERIALS?',
+        question: 'HOW DO I CHOOSE THE RIGHT SIZE?',
         answer:
-          'Follow each garment care label. Most pieces should be cold washed or dry cleaned to preserve structure, color, and finish.',
+          'Use the size guide measurements and compare them with your body measurements or a similar garment to choose the best fit.',
       },
       {
-        question: 'DO YOU PROVIDE MATERIAL SOURCING DETAILS?',
+        question: 'WHAT IF MY SIZE IS SOLD OUT?',
         answer:
-          'Material composition is listed on each product page. Additional sourcing details can be requested through our customer service team.',
+          'If a size is currently unavailable, contact support for restock updates or recommended alternatives with a similar fit profile.',
       },
     ],
   };
